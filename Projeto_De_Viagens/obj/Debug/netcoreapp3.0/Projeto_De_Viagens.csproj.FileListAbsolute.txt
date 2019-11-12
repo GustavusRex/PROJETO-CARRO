@@ -1,3 +1,0 @@
-C:\Users\Dev4Jobs5\source\repos\Projeto_De_Viagens\Projeto_De_Viagens\obj\Debug\netcoreapp3.0\Projeto_De_Viagens.csprojAssemblyReference.cache
-C:\Users\Dev4Jobs5\source\repos\Projeto_De_Viagens\Projeto_De_Viagens\obj\Debug\netcoreapp3.0\Projeto_De_Viagens.AssemblyInfoInputs.cache
-C:\Users\Dev4Jobs5\source\repos\Projeto_De_Viagens\Projeto_De_Viagens\obj\Debug\netcoreapp3.0\Projeto_De_Viagens.AssemblyInfo.cs

@@ -1,0 +1,21 @@
+C:\Users\user\source\repos\Projeto De Viagens\Projeto De Viagens\bin\Debug\netcoreapp2.1\Projeto De Viagens.deps.json
+C:\Users\user\source\repos\Projeto De Viagens\Projeto De Viagens\bin\Debug\netcoreapp2.1\Projeto De Viagens.runtimeconfig.json
+C:\Users\user\source\repos\Projeto De Viagens\Projeto De Viagens\bin\Debug\netcoreapp2.1\Projeto De Viagens.runtimeconfig.dev.json
+C:\Users\user\source\repos\Projeto De Viagens\Projeto De Viagens\bin\Debug\netcoreapp2.1\Projeto De Viagens.dll
+C:\Users\user\source\repos\Projeto De Viagens\Projeto De Viagens\bin\Debug\netcoreapp2.1\Projeto De Viagens.pdb
+C:\Users\user\source\repos\Projeto De Viagens\Projeto De Viagens\obj\Debug\netcoreapp2.1\Projeto De Viagens.csprojAssemblyReference.cache
+C:\Users\user\source\repos\Projeto De Viagens\Projeto De Viagens\obj\Debug\netcoreapp2.1\Projeto De Viagens.csproj.CoreCompileInputs.cache
+C:\Users\user\source\repos\Projeto De Viagens\Projeto De Viagens\obj\Debug\netcoreapp2.1\Projeto De Viagens.AssemblyInfoInputs.cache
+C:\Users\user\source\repos\Projeto De Viagens\Projeto De Viagens\obj\Debug\netcoreapp2.1\Projeto De Viagens.AssemblyInfo.cs
+C:\Users\user\source\repos\Projeto De Viagens\Projeto De Viagens\obj\Debug\netcoreapp2.1\Projeto De Viagens.dll
+C:\Users\user\source\repos\Projeto De Viagens\Projeto De Viagens\obj\Debug\netcoreapp2.1\Projeto De Viagens.pdb
+C:\Users\Dev4Jobs5\Desktop\Projeto_Viagem\Projeto_Agencia_Viagem-Gustavo(Cavalinho)\Projeto De Viagens\bin\Debug\netcoreapp2.1\Projeto De Viagens.deps.json
+C:\Users\Dev4Jobs5\Desktop\Projeto_Viagem\Projeto_Agencia_Viagem-Gustavo(Cavalinho)\Projeto De Viagens\bin\Debug\netcoreapp2.1\Projeto De Viagens.runtimeconfig.json
+C:\Users\Dev4Jobs5\Desktop\Projeto_Viagem\Projeto_Agencia_Viagem-Gustavo(Cavalinho)\Projeto De Viagens\bin\Debug\netcoreapp2.1\Projeto De Viagens.runtimeconfig.dev.json
+C:\Users\Dev4Jobs5\Desktop\Projeto_Viagem\Projeto_Agencia_Viagem-Gustavo(Cavalinho)\Projeto De Viagens\bin\Debug\netcoreapp2.1\Projeto De Viagens.dll
+C:\Users\Dev4Jobs5\Desktop\Projeto_Viagem\Projeto_Agencia_Viagem-Gustavo(Cavalinho)\Projeto De Viagens\bin\Debug\netcoreapp2.1\Projeto De Viagens.pdb
+C:\Users\Dev4Jobs5\Desktop\Projeto_Viagem\Projeto_Agencia_Viagem-Gustavo(Cavalinho)\Projeto De Viagens\obj\Debug\netcoreapp2.1\Projeto De Viagens.csprojAssemblyReference.cache
+C:\Users\Dev4Jobs5\Desktop\Projeto_Viagem\Projeto_Agencia_Viagem-Gustavo(Cavalinho)\Projeto De Viagens\obj\Debug\netcoreapp2.1\Projeto De Viagens.AssemblyInfoInputs.cache
+C:\Users\Dev4Jobs5\Desktop\Projeto_Viagem\Projeto_Agencia_Viagem-Gustavo(Cavalinho)\Projeto De Viagens\obj\Debug\netcoreapp2.1\Projeto De Viagens.AssemblyInfo.cs
+C:\Users\Dev4Jobs5\Desktop\Projeto_Viagem\Projeto_Agencia_Viagem-Gustavo(Cavalinho)\Projeto De Viagens\obj\Debug\netcoreapp2.1\Projeto De Viagens.dll
+C:\Users\Dev4Jobs5\Desktop\Projeto_Viagem\Projeto_Agencia_Viagem-Gustavo(Cavalinho)\Projeto De Viagens\obj\Debug\netcoreapp2.1\Projeto De Viagens.pdb
