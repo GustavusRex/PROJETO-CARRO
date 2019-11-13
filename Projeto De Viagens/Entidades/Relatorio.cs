@@ -38,15 +38,9 @@ namespace Projeto_De_Viagens.Entidades
 
         public override string ToString()
         {
-            if(KmPercorrido == 0)
-                Console.WriteLine("Viagem Não percorrida\n\n");
-            else if (_viagemCarro.Viagem.Distancia > 0)
-                Console.WriteLine("Viagem não completada\n\n");
-            else if (_viagemCarro.Viagem.Distancia <=0)
-                Console.WriteLine("Viagem Completa\n\n");
-       
+
             StringBuilder sb = new StringBuilder();
-            sb.AppendLine($"{_viagemCarro.Veiculo}\n\n\n");
+            sb.AppendLine($"{_viagemCarro._Veiculo}\n\n\n");
             sb.AppendLine($"ID da viagem executada {_viagemCarro.ID}");
             sb.AppendLine($"Teve {ParadasAbastecimento} Paradas para Abastecer, Teve {ParadasCalibragem} Paradas para Calibrar");
             sb.AppendLine($"Teve {LitrosConsumidos} Litros de combustivel consumidos, Teve {KmPercorrido} KM percorridos");
@@ -58,8 +52,15 @@ namespace Projeto_De_Viagens.Entidades
             MudancaClimatica.ForEach(x => {
                 sb.AppendLine($"{x}\n");
             });
-            return sb.ToString();
+            if (KmPercorrido == 0)
+                sb.AppendLine("Viagem Não percorrida\n\n");
+            else if (_viagemCarro._Viagem.Distancia > 0)
+                sb.AppendLine("Viagem não completada\n\n");
+            else if (_viagemCarro._Viagem.Distancia <= 0)
+                sb.AppendLine("Viagem Completa\n\n");
 
+            return sb.ToString();
         }
+
     }
 }

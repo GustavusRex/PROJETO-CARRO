@@ -98,7 +98,6 @@ namespace Projeto_De_Viagens.Entidades
         } 
         public override string ToString()
         {
-
             StringBuilder sb = new StringBuilder();
 
             sb.AppendLine($"ID {ID}, Data {DataCadastro}");
