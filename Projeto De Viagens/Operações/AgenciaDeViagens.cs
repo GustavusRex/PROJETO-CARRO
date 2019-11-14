@@ -7,14 +7,12 @@ namespace Projeto_De_Viagens.Operações
 {
     public class AgenciaDeViagens
     {
-
         public List<Veiculo> Veiculos = new List<Veiculo>();
         public List<Viagem> Viagens = new List<Viagem>();
         public List<ViagemCarro> CarroViagens = new List<ViagemCarro>();
         public List<Relatorio> Relatorios = new List<Relatorio>();
         int Codigo;
         string opcao;
-
         public void CadastrarCarro()
         {
             Console.Clear();
@@ -193,12 +191,17 @@ namespace Projeto_De_Viagens.Operações
             Console.Clear();
             Console.Write("Deseja fazer essa viagem de maneira automatica? Digite S para sim e N para não e faze-la de forma procedural: ");
             opcao = Validacao.ValidarSimOuNao(Console.ReadLine().ToUpper());
+            if(viagemCarro._Viagem.Distancia == 0)
+            {
+                Console.WriteLine("Viagem já percorrida!!!");
+                Console.ReadKey();
+                return;
+            }
             if (opcao == "S")
                 viagemCarro.DirigirNaViagemAutomatico(this);
             else
                 viagemCarro.DirigirNaViagemProcedural(this);
         }
-
         public void ExibirRelatorios() // EXIBIR RELATORIOS DAS VIAGENS FEITAS
         {
             Console.Clear();

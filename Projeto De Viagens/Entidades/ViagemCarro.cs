@@ -7,12 +7,12 @@ namespace Projeto_De_Viagens.Entidades
         public Veiculo _Veiculo;
         public Viagem _Viagem;
         string opcao = "";
+        string opcao2 = "";
         public ViagemCarro(Viagem viagem, Veiculo veiculo)
         {
             _Veiculo = veiculo;
             _Viagem = viagem;
         }
-
         void PosCorrida(Relatorio re)
         {
             Console.Clear();
@@ -46,8 +46,8 @@ namespace Projeto_De_Viagens.Entidades
             {
                 Console.WriteLine("Você está sem combustivel... deseja abastecer?\n");
                 Console.Write("Digite S para Sim ou N para Não: ");
-                opcao = Validacao.ValidarSimOuNao(Console.ReadLine().ToUpper());
-                if (opcao == "S")
+                opcao2 = Validacao.ValidarSimOuNao(Console.ReadLine().ToUpper());
+                if (opcao2 == "S")
                 {
                     _Veiculo.AbastecerVeiculoFlex();
                     re.ParadasAbastecimento++;
@@ -63,8 +63,8 @@ namespace Projeto_De_Viagens.Entidades
             {
                 Console.WriteLine("Seu pneu está totalmente descalibrado... deseja calibrar?\n");
                 Console.Write("Digite S para Sim ou N para Não: ");
-                opcao = Validacao.ValidarSimOuNao(Console.ReadLine().ToUpper());
-                if (opcao == "S")
+                opcao2 = Validacao.ValidarSimOuNao(Console.ReadLine().ToUpper());
+                if (opcao2 == "S")
                 {
                     _Veiculo.Calibrar();
                     re.ParadasCalibragem++;
@@ -84,8 +84,8 @@ namespace Projeto_De_Viagens.Entidades
             {
                 Console.WriteLine("Você está sem combustivel... deseja abastecer?\n");
                 Console.Write("Digite S para Sim ou N para Não: ");
-                opcao = Validacao.ValidarSimOuNao(Console.ReadLine().ToUpper());
-                if (opcao == "S")
+                opcao2 = Validacao.ValidarSimOuNao(Console.ReadLine().ToUpper());
+                if (opcao2 == "S")
                 {
                     _Veiculo.AbastecerVeiculoPadrão();
                     re.ParadasAbastecimento++;
@@ -101,8 +101,8 @@ namespace Projeto_De_Viagens.Entidades
             {
                 Console.WriteLine("Seu pneu está totalmente descalibrado... deseja calibrar?\n");
                 Console.Write("Digite S para Sim ou N para Não: ");
-                opcao = Validacao.ValidarSimOuNao(Console.ReadLine().ToUpper());
-                if (opcao == "S")
+                opcao2 = Validacao.ValidarSimOuNao(Console.ReadLine().ToUpper());
+                if (opcao2 == "S")
                 {
                     _Veiculo.Calibrar();
                     re.ParadasCalibragem++;
@@ -132,7 +132,7 @@ namespace Projeto_De_Viagens.Entidades
             if (_Veiculo.TipoCombustivel == "gasolina") 
             {
                 AutenticaoParaBViagemPadrao(_Veiculo.LitrosGasolina, relatorio, agencia);
-                if (opcao == "N") return;
+                if (opcao2 == "N") return;
                 do
                 {
                     AutonomiaG = Calculo.CalcularAutonomiaPadrao(_Viagem.Clima, _Veiculo, _Veiculo.KmPorGasolinaAtual);
@@ -144,7 +144,7 @@ namespace Projeto_De_Viagens.Entidades
                     {
                         _Veiculo.LitrosGasolina = 0.0;
                         AutenticaoParaBViagemPadrao(_Veiculo.LitrosGasolina, relatorio, agencia); // CASO PARE E NÃO COMPLETOU 
-                        if (opcao == "N") return;
+                        if (opcao2 == "N") return;
                     }
                     cont = Math.Round((cont + 0.1), 1);
                     if (cont == 100)
@@ -154,7 +154,7 @@ namespace Projeto_De_Viagens.Entidades
                         _Viagem.AlteracaoClima();
                         relatorio.MudancaClimaticaDoEvento(relatorio.KmPercorrido, _Viagem.Clima);
                         AutenticaoParaBViagemPadrao(_Veiculo.LitrosGasolina, relatorio, agencia);
-                        if (opcao == "N") return;
+                        if (opcao2 == "N") return;
                         cont = 0;
                     }
 
@@ -169,7 +169,7 @@ namespace Projeto_De_Viagens.Entidades
             else if (_Veiculo.TipoCombustivel == "alcool")
             {
                 AutenticaoParaBViagemPadrao(_Veiculo.LitrosAlcool, relatorio, agencia);
-                if (opcao == "N") return;
+                if (opcao2 == "N") return;
                 do
                 {
                     AutonomiaA = Calculo.CalcularAutonomiaPadrao(_Viagem.Clima, _Veiculo, _Veiculo.KmPorAlcoolAtual);
@@ -181,7 +181,7 @@ namespace Projeto_De_Viagens.Entidades
                     {
                         _Veiculo.LitrosAlcool = 0.0;
                         AutenticaoParaBViagemPadrao(_Veiculo.LitrosAlcool, relatorio, agencia);
-                        if (opcao == "N") return;
+                        if (opcao2 == "N") return;
                     }
                     cont = Math.Round((cont + 0.1), 1);
                     if (cont == 100)
@@ -191,7 +191,7 @@ namespace Projeto_De_Viagens.Entidades
                         _Viagem.AlteracaoClima();
                         relatorio.MudancaClimaticaDoEvento(relatorio.KmPercorrido, _Viagem.Clima);
                         AutenticaoParaBViagemPadrao(_Veiculo.LitrosAlcool, relatorio, agencia);
-                        if (opcao == "N") return;
+                        if (opcao2 == "N") return;
                         cont = 0;
                     }
 
@@ -206,7 +206,7 @@ namespace Projeto_De_Viagens.Entidades
             else if (_Veiculo.Flex)
             {
                 AutenticaoParaBViagemFlex(relatorio, agencia);
-                if (opcao == "N") return;
+                if (opcao2 == "N") return;
                 do
                 {
                     AutonomiaA = Calculo.CalcularAutonomiaFlexA(_Viagem.Clima, _Veiculo);
@@ -222,14 +222,14 @@ namespace Projeto_De_Viagens.Entidades
                         _Veiculo.LitrosGasolina = Math.Round((_Veiculo.LitrosGasolina - (0.1 / AutonomiaG)), 2);
                         relatorio.LitrosConsumidos = Math.Round((relatorio.LitrosConsumidos + (0.1 / AutonomiaG)), 2);
                         AutenticaoParaBViagemFlex(relatorio, agencia);
-                        if (opcao == "N") return;
+                        if (opcao2 == "N") return;
                     }
                     if (_Veiculo.LitrosAlcool <= 0.0 && _Veiculo.LitrosGasolina <= 0.0)
                     {
                         _Veiculo.LitrosGasolina = 0.0;
                         _Veiculo.LitrosAlcool = 0.0;
                         AutenticaoParaBViagemFlex(relatorio, agencia);
-                        if (opcao == "N") return;
+                        if (opcao2 == "N") return;
                     }
                     cont = Math.Round((cont + 0.1), 1);
                     if (cont == 100)
@@ -239,7 +239,7 @@ namespace Projeto_De_Viagens.Entidades
                         _Viagem.AlteracaoClima();
                         relatorio.MudancaClimaticaDoEvento(relatorio.KmPercorrido, _Viagem.Clima);
                         AutenticaoParaBViagemPadrao(_Veiculo.LitrosAlcool, relatorio, agencia);
-                        if (opcao == "N") return;
+                        if (opcao2 == "N") return;
                         cont = 0;
                     }
 
@@ -253,6 +253,7 @@ namespace Projeto_De_Viagens.Entidades
         }
         public void DirigirNaViagemProcedural(AgenciaDeViagens agencia) // PERCORRER A VIAGEM COM UM VEICULO DE MODO PROCEDURAL, ONDE RODA DEPENDENDO ATÉ ONDE O USUARIO DIGITOU E PARA EM UM POSTO
         {
+
             Relatorio relatorio = new Relatorio(this);  
 
             _Veiculo.KmPorAlcool = _Veiculo.KmPorAlcoolAtual;
@@ -268,10 +269,9 @@ namespace Projeto_De_Viagens.Entidades
             if (_Veiculo.TipoCombustivel == "gasolina")
             {
                 AutenticaoParaBViagemPadrao(_Veiculo.LitrosGasolina, relatorio, agencia);
-                if (opcao == "N") return;
+                if (opcao2 == "N") return;
                 do
                 {
-
                     Console.WriteLine($"A viagem tem: {_Viagem.Distancia}");
                     Console.Write("Digite quantos KM deseja rodar com o veiculo: ");
                     KmRodar += Validacao.ValidarNumerosDouble(Console.ReadLine());
@@ -287,7 +287,7 @@ namespace Projeto_De_Viagens.Entidades
                         {
                             _Veiculo.LitrosGasolina = 0.0;
                             AutenticaoParaBViagemPadrao(_Veiculo.LitrosGasolina, relatorio, agencia);
-                            if (opcao == "N") return;
+                            if (opcao2 == "N") return;
                         }
                         cont = Math.Round((cont + 0.1), 1);
                         if (cont == 100)
@@ -298,7 +298,7 @@ namespace Projeto_De_Viagens.Entidades
                             relatorio.MudancaClimaticaDoEvento(relatorio.KmPercorrido, _Viagem.Clima);
                             if(_Veiculo.EstadoPneu == 0)
                             AutenticaoParaBViagemPadrao(_Veiculo.LitrosGasolina, relatorio, agencia);
-                            if (opcao == "N") return;
+                            if (opcao2 == "N") return;
                             cont = 0;
                         }
                     }
@@ -314,7 +314,7 @@ namespace Projeto_De_Viagens.Entidades
             else if (_Veiculo.TipoCombustivel == "alcool")
             {
                 AutenticaoParaBViagemPadrao(_Veiculo.LitrosAlcool, relatorio, agencia);
-                if (opcao == "N") return;
+                if (opcao2 == "N") return;
                 do
                 {                  
                     Console.WriteLine($"A viagem tem: {_Viagem.Distancia}");
@@ -332,7 +332,7 @@ namespace Projeto_De_Viagens.Entidades
                         {
                             _Veiculo.LitrosAlcool = 0.0;
                             AutenticaoParaBViagemPadrao(_Veiculo.LitrosAlcool, relatorio, agencia);
-                            if (opcao == "N") return;
+                            if (opcao2 == "N") return;
                         }
                         cont = Math.Round((cont + 0.1), 1);
                         if (cont == 100)
@@ -343,10 +343,11 @@ namespace Projeto_De_Viagens.Entidades
                             relatorio.MudancaClimaticaDoEvento(relatorio.KmPercorrido, _Viagem.Clima);
                             if (_Veiculo.EstadoPneu == 0)
                                 AutenticaoParaBViagemPadrao(_Veiculo.LitrosAlcool, relatorio, agencia);
-                            if (opcao == "N") return;
+                            if (opcao2 == "N") return;
                             cont = 0;
                         }
                     }
+                    
                     PosCorrida(relatorio);
 
                 } while (_Viagem.Distancia > 0);
@@ -360,35 +361,37 @@ namespace Projeto_De_Viagens.Entidades
             else if (_Veiculo.Flex)
             {
                 AutenticaoParaBViagemFlex(relatorio, agencia);
-                if (opcao == "N") return;
+                if (opcao2 == "N") return;
                 do
-                {                
+                {               
                     Console.WriteLine($"A viagem tem: {_Viagem.Distancia}");
                     Console.Write("Digite quantos KM deseja rodar com o veiculo: ");
                     KmRodar += Validacao.ValidarNumerosDouble(Console.ReadLine());
                     while (relatorio.KmPercorrido < KmRodar && _Viagem.Distancia > 0)
                     {
-                        Console.Clear();
+                        
                         AutonomiaA = Calculo.CalcularAutonomiaPadrao(_Viagem.Clima, _Veiculo, _Veiculo.KmPorAlcoolAtual);
                         AutonomiaG = Calculo.CalcularAutonomiaPadrao(_Viagem.Clima, _Veiculo, _Veiculo.KmPorAlcoolAtual);
                         _Viagem.Distancia = Math.Round((_Viagem.Distancia - 0.1), 2);
                         relatorio.KmPercorrido = Math.Round((relatorio.KmPercorrido + 0.1), 2);
                         if (_Veiculo.LitrosAlcool > 0.0)
+                        {
                             _Veiculo.LitrosAlcool = Math.Round((_Veiculo.LitrosAlcool - (0.1 / AutonomiaA)), 2);
                             relatorio.LitrosConsumidos = Math.Round((relatorio.LitrosConsumidos + (0.1 / AutonomiaA)), 2);
+                        }
                         if (_Veiculo.LitrosAlcool <= 0.0)
                         {
                             _Veiculo.LitrosAlcool = 0.0;
                             _Veiculo.LitrosGasolina = Math.Round((_Veiculo.LitrosGasolina - (0.1 / AutonomiaG)), 2);
                             relatorio.LitrosConsumidos = Math.Round((relatorio.LitrosConsumidos + (0.1 / AutonomiaG)), 2);
-                            if (opcao == "N") return;
+                            if (opcao2 == "N") return;
                         }
                         if (_Veiculo.LitrosAlcool <= 0.0 && _Veiculo.LitrosGasolina <= 0.0)
                         {
                             _Veiculo.LitrosGasolina = 0.0;
                             _Veiculo.LitrosAlcool = 0.0;
                             AutenticaoParaBViagemFlex(relatorio, agencia);
-                            if (opcao == "N") return;
+                            if (opcao2 == "N") return;
                         }
                         cont = Math.Round((cont + 0.1), 1);
                         if (cont == 100)
@@ -399,7 +402,7 @@ namespace Projeto_De_Viagens.Entidades
                             relatorio.MudancaClimaticaDoEvento(relatorio.KmPercorrido, _Viagem.Clima);
                             if (_Veiculo.EstadoPneu == 0)
                                 AutenticaoParaBViagemFlex(relatorio, agencia);
-                            if (opcao == "N") return;
+                            if (opcao2 == "N") return;
                             cont = 0;
                         }
                     }

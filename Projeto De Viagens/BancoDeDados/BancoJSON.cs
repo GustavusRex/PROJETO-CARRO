@@ -21,7 +21,6 @@ namespace Projeto_De_Viagens.BancoDeDados
             AgenciaDeViagens agencia = JsonConvert.DeserializeObject<AgenciaDeViagens>(o1.ToString());
             return agencia;
         }
-
         public void Salvar(AgenciaDeViagens agencia)
         {
             using (StreamWriter file = File.CreateText(Json))
